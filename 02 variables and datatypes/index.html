@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Variable Rules & Data Types</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1, h2 {
+            color: #2c3e50;
+        }
+
+        ol, ul {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        ol li, ul li {
+            margin-bottom: 15px;
+        }
+
+        ul {
+            margin-top: 10px;
+        }
+
+        pre {
+            background-color: #e8f0fe;
+            padding: 15px;
+            border-radius: 8px;
+            font-family: "Courier New", Courier, monospace;
+            border: 1px solid #dcdcdc;
+            overflow-x: auto;
+        }
+
+        code {
+            font-family: "Courier New", Courier, monospace;
+            color: #c0392b;
+        }
+
+        h2 {
+            color: #2980b9;
+            margin-top: 20px;
+        }
+
+        /* Responsive design */
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+
+            ol, ul {
+                padding: 15px;
+            }
+
+            pre {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>JavaScript Variable Rules</h1>
+    <ol>
+        <li><strong>Variable declaration:</strong>
+            <ul>
+                <li>Use <code>let</code>, <code>const</code>, or <code>var</code>.</li>
+                <li><code>let</code> and <code>const</code> are block-scoped (modern), while <code>var</code> is function-scoped (older).</li>
+                <li><code>const</code> is for constants that don't change their value.</li>
+                <li><strong><code>var</code> allows redeclaration</strong> of the same variable within the same scope, which can lead to unexpected behavior.</li>
+            </ul>
+        </li>
+        <li><strong>Variable name:</strong>
+            <ul>
+                <li>Must begin with a letter, underscore (<code>_</code>), or dollar sign (<code>$</code>).</li>
+                <li>Cannot start with a number.</li>
+                <li>Can include letters, digits, underscores, and dollar signs.</li>
+                <li>Case-sensitive (e.g., <code>myVar</code> and <code>myvar</code> are different).</li>
+            </ul>
+        </li>
+        <li><strong>Reserved words:</strong> Cannot use JavaScript keywords like <code>class</code>, <code>return</code>, <code>function</code>, etc., as variable names.</li>
+    </ol>
+
+    <h2>Example:</h2>
+    <pre>
+<code>
+var x = 5;
+var x = 10;  // No error, redeclaration is allowed
+console.log(x);  // Output: 10
+</code>
+    </pre>
+
+    <h1>JavaScript Data Types</h1>
+    <ol>
+        <li><strong>Primitive Data Types:</strong>
+            <ul>
+                <li><strong>Number:</strong> Represents both integers and floating-point numbers.</li>
+                <li><strong>String:</strong> Represents sequences of characters.</li>
+                <li><strong>Boolean:</strong> Represents <code>true</code> or <code>false</code>.</li>
+                <li><strong>Undefined:</strong> A variable that has been declared but not assigned a value.</li>
+                <li><strong>Null:</strong> Represents the intentional absence of any object value.</li>
+                <li><strong>Symbol:</strong> Represents unique values often used as object keys.</li>
+                <li><strong>BigInt:</strong> Used for large integers beyond the safe limit of <code>Number</code>.</li>
+            </ul>
+        </li>
+        <li><strong>Non-Primitive Data Types (Reference Types):</strong>
+            <ul>
+                <li><strong>Object:</strong> A collection of key-value pairs.</li>
+                <li><strong>Array:</strong> An ordered list of values.</li>
+                <li><strong>Function:</strong> A block of code designed to perform a task.</li>
+                <li><strong>Date:</strong> Represents a specific moment in time.</li>
+            </ul>
+        </li>
+    </ol>
+
+    <h2>Example:</h2>
+    <pre>
+<code>
+let num = 42;  // Number
+let name = "John";  // String
+let isValid = true;  // Boolean
+let nothing = null;  // Null
+let bigIntValue = 9007199254740991n;  // BigInt
+let obj = { key: "value" };  // Object
+let arr = [1, 2, 3];  // Array
+</code>
+    </pre>
+<script src="datatype.js"></script>
+</body>
+</html>

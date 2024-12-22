@@ -1,0 +1,21 @@
+<!-- 
+synchronous code : code which are executed on same time.
+Asynchronous code : code which doesnot execute at same time or take some time than other code
+Blocking : code after asynchronous code stop executing due to asynchronous code 
+Event loop: we use to handle asynchronous code using event loop to prevent blocking.
+            it include three components.
+            1) call stack
+            2) Browser
+            3) callback queue
+eg:- we have code like
+                    console.log("start");
+                    setTimeOut(sayMYname,5000);
+                    console.log("end");
+in this 1st and last line in synchronous code and 2nd or middle linke is asynchronous code
+any code first go to call stack if synchronous execute 
+if asynchronus call stack pass that code to browser and other code executes.
+i.e setTimeOut(sayMyName,500); passes to browser and time counting start in brower. 
+if time complete then asynchronous code go from browser to callback Queue.
+and then if call stack is empty then code passes from queue to stack and execute
+and another code exexute
+-->

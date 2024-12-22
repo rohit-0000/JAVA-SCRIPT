@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            font-size: 2rem;
+            text-align: center;
+        }
+        #D1{
+            background-color:brown;
+        }
+        #D2{
+            background-color: blueviolet;
+        }
+
+        #D1P1{
+            background-color: yellow;
+        }
+        #D2P1{
+            background-color: yellowgreen;
+        }
+    </style>
+</head>
+<body>
+    <div id="D1">
+        First DIV
+        <p id="D1P1">
+            First Para
+        </p>
+    </div>
+
+    <div id="D2">
+        Second DIV
+        <p id="D2P1">
+            Second Para
+        </p>
+    </div>
+
+
+    <script>
+        let ele=document.querySelector('#D1P1');
+        ele.style.backgroundColor='blue'; // yellow to blue
+        ele.style.color='white'; // black to white
+
+        // Multiple property at a time
+        let ele2=document.querySelector('#D2P1');
+        // ele2.style.backgroundColor='orange'; 
+        // ele2.style.color='aqua';
+        ele2.style.cssText="background-Color:orange; color:aqua; font-style:italic;"; // bg color:- yellowgreen to orange  & color :-black to aqua
+        
+        //set attribute : create or change the property
+        ele2.setAttribute('class','div');
+        console.log(ele2);  //<p id="D2P1" class="div" style="background-color: orange; color: aqua; font-style: italic;"> Second Para </p>
+        ele.setAttribute('style','font-weight: bold;');
+
+        //className :-change or vreate
+        ele.className="ckeck_class_name";
+        ele.className;
+        console.log(ele);// <p id="D1P1" style="font-weight: bold;" class="ckeck_class_name"> First Para </p>
+
+        //classList
+        ele.classList; //DOMTokenList ['ckeck_class_name', value: 'ckeck_class_name']
+        ele.classList.add('ck');
+        ele.classList.contains('ck');//true
+        ele.classList.remove('ck');
+        ele.classList.contains('ck');//false
+        ele.classList.toggle('ck');
+        ele.classList.contains('ck');//true
+        ele.classList.toggle('ck');
+        ele.classList.contains('ck');//false
+
+
+    </script>
+</body>
+</html>

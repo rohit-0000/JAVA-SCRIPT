@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="check">
+        <h1>heading</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi illo quisquam, ab repellat ut optio dolorum
+            ullam aut reiciendis sequi, odio, aspernatur ipsam est omnis reprehenderit ea eveniet eos vitae?</p>
+    </div>
+
+    <div id="butt">
+        <button type="button">
+            check 1
+        </button>
+    </div>
+    <a href="https://www.google.com" id="link_google"> Google </a>
+
+    <div class="wrapper" id="wr">
+        <p class="wr_item" id="fpara">First para</p>
+        <p class="wr_item" id="spara">Second para</p>
+        <p class="wr_item" id="tpara">Third <span> check </span>para</p>
+        <p class="wr_item" id="fopara">Fourth para</p>
+    </div>
+    <script>
+        // monitorEvents(document);
+        // unmonitorEvents(document);
+
+        // Event target :- suppose a play button is clicked then video start playing
+        //              event=click
+        //              event-target= play button
+        //              action = video play
+        //              event-listener:- we write code to perform action
+        function change(event) {
+            console.log(event); // event passed at event listener function
+            // let body=document.getElementsByTagName('body')[0];
+            let body = document.getElementsByClassName('check')[0];
+            body.style.backgroundColor = 'blue';
+            body.style.color = 'white';
+
+            body.textContent = " Event target :- suppose a play button is clicked then video start playing     event=click    event-target= play button        action = video play              event-listener:- we write code to perform action ";
+        }
+        let x = document.querySelector("#butt");
+        x.addEventListener('click', change);
+        // x.removeEventListener('click' , change);
+
+
+        //----------------------------------------------------------------------
+        //Phase of event
+        // 
+        //     --> capture phase :- going toward the target in dom
+        //     --> target phase :- at target
+        //     --> bubbling phase :- returning back to head in dom
+        // by default addEventListener apllying at the bubbling phase.
+        //  x.addEventListener('click' , change ,true); now it will appling at capturing phase
+        // If even is triggered then event pass to the eventListener function as argument;
+
+
+        //----------------------------------------------------------------
+        //Default behaviour
+        // every tag has its own default behaviour which can be changed using "preventDefault()".
+        function default_action(event) {
+            let get_link = document.getElementById("link_google");
+            event.preventDefault();  // tag default behhavior disabled
+            get_link.textContent = "google opened";
+        }
+        let get_link = document.getElementById("link_google");
+        get_link.addEventListener("click", default_action);
+
+        // we should try to use minimum listner
+        //eg: take wrapper class in above html code
+
+        //2nd ;- in this we have link every para to one event listener
+        let wrap = document.querySelectorAll(".wr_item");
+        function use_ev_listener(event) {
+            // if(event.target.nodeName==="SPAN") // due to this we get alert if we click on span tag only
+            alert("you have clicked on wrapper id = " + event.target.textContent);
+        }
+        // for (let i = 0; i < wrap.length; i++) {
+        //     let item = wrap[i];
+        //     item.addEventListener("click", use_ev_listener);
+
+        // //1st:- here we have created 4 event listen 
+        //     // item.addEventListener("click", function() {
+        //     //     alert("you have clicked on wrapper id = " + (i+1));
+        //     // });
+        // }
+
+        // 3nd :-  best method to use
+        let wrap_3 = document.getElementById(wr);
+        wr.addEventListener('click', use_ev_listener);
+        // Note: if we click on span then only span content will be printed. 
+        // if we click on paragraph then whole paragraph and span content will be printed (span comes under para)
+        // this is due to "target" or we can say "event.target"
+        // we can apply condition on particular tag under parent node eg:-// if(event.target.nodeName==="SPAN") // due to this we get alert if we click on span tag only
+                                                                             // alert("you have clicked on wrapper id = " + event.target.textContent);
+
+
+    </script>
+
+
+
+</body>
+
+</html>
+<!-- homework:-
+document.addEventListener("DOMContentLoaded", function() {
+    // Create a new script element
+    const script = document.createElement("script");
+
+    // Set the source of the script
+    script.src = "path/to/your/script.js";
+    
+    // Append the script to the document's head or body
+    document.head.appendChild(script);
+}); -->

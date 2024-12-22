@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Window</h2>
+    <p>
+        Represents the browser window or tab in which the JavaScript code is running.
+    </p>
+    <h2>DOM</h2>
+    <p>
+    <ul type="disk">
+        <li>Document Object Model (DOM):</li>
+        <li>represented as an object.</li>
+        <li>The DOM allows JavaScript code to interact with and manipulate elements of the HTML page.</li>
+        <li>Access to the DOM is obtained through the document object.</li>
+    </ul>
+    </p>
+    <h2>Document Object:</h2>
+    <p>
+    <ul type="square">
+        <li>The root object of the DOM, representing the entire HTML document.</li>
+        <li>Provides methods and properties to access and manipulate elements, attributes, and text nodes within the
+            document.
+        </li>
+        <li> EX:
+            <ul type="disk">
+                <li> document.getElementById("Fpara");</li>
+                <li> document.getElementsByClassName("Para");</li>
+                <li> document.getElementsByTagName("p");
+
+                <li> document.querySelector("#Fpara");</li>
+                <li> document.querySelector(".Para"); // only topmost para with class "Para" is selected.</li>
+                <li> document.querySelectorAll(".Para"); // all with class "Para" is selected.</li>
+                <li> document.querySelectorAll("h1");</li>
+            </ul>
+        </li>
+    </ul>
+    </p>
+
+    <h2>Browser Object Model (BOM):</h2>
+    <p>
+    <ul type="square">
+        <li>A set of objects that provide access to the browser's environment and features, beyond the content of the
+            web page.</li>
+        <li>Includes objects like window, location, history, screen, navigator, and more.</li>
+        <li>Allows JavaScript code to interact with the browser's features, such as opening new windows, controlling
+            history, and accessing device information.</li>
+    </ul>
+    <p>
+    <h1>Key Points:</h1>
+    <div>
+        <ul type="star">
+            <li>The Window object represents the browser window.</li>
+            <li>The DOM represents the structure of the HTML document.</li>
+            <li>The document object is the root of the DOM.</li>
+            <li>The BOM provides access to the browser's environment and features.</li>
+            <li>JavaScript code can use these objects to interact with the browser and manipulate the content of web
+                pages.</li>
+        </ul>
+    </div>
+    <H1 id="Fheading" class="Head">DOM MANIPULATION</H1>
+    <p id="Fpara" class="Para"> First Para</p>
+    <p id="Spara" class="Para"> Second Para</p>
+    <p id="Tpara" class="TFpara"> Third Para </p>
+    <p id="Fpara" class="TFpara"> Fourth Para </p>
+</body>
+
+</html>
+
+<!--
+// document.getElementById("Fpara");
+// document.getElementsByClassName("Para");
+// document.getElementsByTagName("p");
+
+// document.querySelector("#Fpara");
+// document.querySelector(".Para"); // only topmost para with class "Para" is selected.
+// document.querySelectorAll(".Para"); // all with class "Para" is selected.
+// document.querySelectorAll("h1");
+
+// $0 is also used to selected the pointed element.
+
+ -->
+
+
+<!-- 
+innerHTML -- > select the inner content of element
+outerHTML -- > select the all content including element.
+innerText -- > select the text which is shown in website.
+textContent -- > select the text as it is written in html
+document.createElement -- > use to create new element(tag)
+textContent -- > is use to add content in created element.
+(element).appendChild -- > is used to add created element in website.(it is added in last in the element )
+(element).insertAdjecentElement(position , element name) -- > used to add element at any position .
+        position can be : 1) beforebegin  2) afterbegin  3)beforeend  4) afterend
+(parent).removeChild(child);
+
+//https://www.codehelp.in/tutorial/javascript/dom-bom-and-window-object-in-java-script
+
+
+
+
+-->
