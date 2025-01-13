@@ -98,3 +98,6 @@ function analog_clock(){
 }
 
 setInterval(analog_clock,1000);
+
+
+

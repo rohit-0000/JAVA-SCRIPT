@@ -7,6 +7,10 @@
     font-weight: 500;
     font-style: normal;
 }
+body{
+    /* background: linear-gradient(45deg, #0a0a0a, #3a4452); */
+    background: #3a4452;
+}
 #container{
     /* background-color: rgb(20, 23, 23); */
     background: linear-gradient(45deg, #0a0a0a, #3a4452);
