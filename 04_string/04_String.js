@@ -44,10 +44,10 @@ console.log(temp);
 //split and join
 {
     let sentance="I am rohit";
-    let word=sentance.split();
+    let word=sentance.split(' ');
     console.log(word);
 
-    let JOIN=word.join("");
+    let JOIN=word.join(" ");
     console.log(JOIN);
 }
 

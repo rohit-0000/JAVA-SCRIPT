@@ -12,7 +12,7 @@ let newDate = new Date(1998, 5, 20, 7);
 
 console.log(newDate.setFullYear(2001));
 
-console.log(first)
+console.log(newDate)
 
 
 

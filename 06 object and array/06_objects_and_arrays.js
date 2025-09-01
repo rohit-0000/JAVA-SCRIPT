@@ -24,10 +24,10 @@ console.log(obj2);
 //array:- Contains Collection of items
 
 let arr=[1,2,3,4,5,6];
-console.log(arr);
+console.log(arr[0]);
 // for(let i=0;i<arr.length;i++)
 // {
-//     process.stdout.write(arr[i]+" ");
+//     process.stdout.write(arr[i]+" "); // print without line change
 // }
 
 let brr=new Array('Love' , 1 ,true ,'*');
@@ -40,12 +40,11 @@ console.log(brr);
 brr.push('*');
 console.log(brr);
 
-brr.shift();
+brr.shift();//left delete
 console.log(brr);
 
-brr.unshift('LOVE');
+brr.unshift('LOVE');//left add
 console.log(brr);
-
 console.log(brr.slice(2));
 console.log(brr.slice(2,3));
 
@@ -62,6 +61,7 @@ let getsquare=arr.map((number1,i)=>{
 console.log(getsquare);
 
 //filter
+console.log("-----------------------------------");
 arr=[22,43,46,91,28];
 let getEven=arr.filter((num)=>{
     // return num%2===0;

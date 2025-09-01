@@ -12,8 +12,9 @@ eg:- we have code like
                     setTimeOut(sayMYname,5000);
                     console.log("end");
 in this 1st and last line in synchronous code and 2nd or middle linke is asynchronous code
-any code first go to call stack if synchronous execute 
-if asynchronus call stack pass that code to browser and other code executes.
+any code first go to call stack 
+if synchronous execute 
+if asynchronus, call stack pass that code to browser and other code executes.
 i.e setTimeOut(sayMyName,500); passes to browser and time counting start in brower. 
 if time complete then asynchronous code go from browser to callback Queue.
 and then if call stack is empty then code passes from queue to stack and execute
